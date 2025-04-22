@@ -1,7 +1,7 @@
 # nijitogotoh portfolio
 
 このリポジトリは、[本番公開中のWebサイト](https://kazehitotsukami.com/) のソースコードです。  
-イラストレーターの活動記録、ポートフォリオサイトとなっています。
+イラストレーターとしての活動記録、ポートフォリオサイトとなっています。
 HTML / CSS / JavaScript をベースに、Sass（SCSS）を使用してスタイルの管理・リファクタリングを行っています。
 
 ---
