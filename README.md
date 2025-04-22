@@ -22,19 +22,6 @@ HTML / CSS / JavaScript をベースに、Sass（SCSS）を使用してスタイ
 
 ---
 
-## 🛠️ Sassのビルド方法
-
-以下のコマンドで Sass をコンパイル・監視できます：
-
-```bash
-# 1回だけビルドする場合
-sass style/scss/style.scss style/css/style.css
-
-# ファイル変更を監視して自動ビルドする場合
-sass --watch style/scss/:style/css/
-
----
-
 ## 🎨 Sassファイル構成
 
 Sassファイルはセクション・用途ごとに分割して管理しています。  
@@ -54,3 +41,16 @@ Sassファイルはセクション・用途ごとに分割して管理してい�
 | `style.scss`                | 上記すべてをインポートするメインファイル |
 
 > 🔸 `_fee.scss` は現在未使用の仮ファイルです。ビルド対象外としてください。
+
+---
+
+## 🛠️ Sassのビルド方法
+
+以下のコマンドで Sass をコンパイル・監視できます：
+
+```bash
+# 1回だけビルドする場合
+sass style/scss/style.scss style/css/style.css
+
+# ファイル変更を監視して自動ビルドする場合
+sass --watch style/scss/:style/css/
