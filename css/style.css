@@ -1,0 +1,1081 @@
+@charset "UTF-8";
+
+html {
+    /* scroll-behavior: smooth; */
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgb(230, 230, 228, 1);
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+メインページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/*ーーーーーーーーーーーー
+header
+ーーーーーーーーーーー*/
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    height: 670px;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-image: url(../../images/illustration/00.png);
+}
+.main-header .logo img {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*ーーーーーーーーーーーー
+links
+ーーーーーーーーーーー*/
+/* トップボタンを押したとき上にスペースができるようここでmargin指定 */
+/* アナログページの指定と統一するため.links-wrapperではなくここで指定 */
+.top-hook {
+    margin-bottom: 55px;
+}
+.links-wrapper {
+    height: 10rem;
+}
+.links {
+    display: flex;
+    max-width: 65%;
+    margin: 0 20%;
+    height: 10rem;
+    background-color: rgb(190, 190, 190, 1);
+    transition: 0.5s;
+}
+.name-section {
+    text-align: center;
+    margin: auto;
+}
+.name-section h2{
+    font-size: 2rem;
+    position: relative;
+}
+.name-section h2::after {
+    content: 'illustrator / MV director';
+    position: absolute;
+    font-weight: 300;
+    font-size: 1rem;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-51%);
+    white-space: nowrap;
+}
+.sns {
+    display: flex;
+    margin: auto;
+    gap: 40px;
+}
+.sns a img {
+    height: 3.3rem;
+    transition: 0.5s;
+}
+/* リンクホバープロパティ */
+.sns a :hover {
+    transform: scale(1.07);
+    opacity: 0.6;
+    z-index: 5;
+}
+
+/*ーーーーーーーーーーーー
+main
+ーーーーーーーーーーー*/
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 55px auto 100px;
+    max-width: 100rem;
+    gap: 1rem 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.content-wrapper img,.analog-btn {
+    width: 32rem;
+    height: 32rem;
+    object-fit: cover;
+/* アナログページボタン用プロパティ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+    background-color: rgb(217, 217, 217, 1);
+}
+/* アナログボタン矢印 */
+.analog-btn p {
+    position: relative;
+}
+.analog-btn p::after {
+    content: '';
+    position: absolute;
+    top: 3.2rem;
+    left: 1.1rem;
+    border-top: 2rem solid rgb(0, 0, 0);
+    border-left: 1rem solid;
+    border-right: 1rem solid;
+    clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+}
+/* メインホバープロパティ */
+.content-wrapper a :hover {
+    transform: scale(1.04);
+    opacity: 0.87;
+    z-index: 5;
+}
+/* アナログボタンのテキスト ホバー相殺プロパティ */
+.analog-btn :hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*ーーーーーーーーーーーー
+footer
+ーーーーーーーーーーー*/
+footer {
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    position: fixed;
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto 0;
+    bottom: 0;
+    background-color: rgb(190, 190, 190, 1);
+}
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5%;
+}
+.btns .nav-btn {
+    display: flex;
+    gap: 1.2rem;
+}
+/* トップボタンの矢印 */
+.btns .top-btn {
+    position: relative;
+}
+.btns .top-btn::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 6px;
+    border-top: 0.7rem solid rgb(0, 0, 0);
+    border-right: 0.7rem solid;
+    clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%);
+}
+/* フッターロゴ */
+.logo-section {
+    display: block;
+    position: absolute;
+    width: 13rem;
+    height: auto;
+}
+.logo-section img {
+    display: block;
+    width: 100%;
+}
+/* フッターホバープロパティ */
+.top-btn:hover ,.nav-btn a:hover {
+    opacity: 0.5;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+アナログイラストページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* トップボタンを押したとき上にスペースができるようここでmargin指定 */
+.analog-top-hook {
+    margin-bottom: 55px;
+}
+/* アナログページ用ヘッダープロパティ */
+.analog-header {
+    display: flex;
+    width:100%;
+    height: 23rem;
+    margin: 0;
+    overflow: hidden;
+}
+.analog-header-textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../../images/analog-illustration/00.PNG);
+}
+.analog-header-textbox h2 {
+    font-size: 2.3rem;
+    margin: auto;
+    position: relative;
+}
+/* テキストの小さい方（analog illustration） */
+.analog-header-textbox ::after {
+    content: 'analog illustration';
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    top: 50px;
+    left: 78px;
+    transform: translateX(-51%);
+    white-space: nowrap;
+}
+/* テキストの白い影 */
+.analog-header-textbox h2 , .analog-header-textbox p {
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+プロフィールページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.profile-content-wrapper {
+    margin-bottom: 55px;
+}
+
+.profile-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-img{
+    height: 50rem;
+    margin: 55px;
+    transition: 0.5s;
+}
+.sns-tablet {
+    display: none;
+    transition: 0.5s;
+}
+.profile-main-textbox {
+    height: 50rem;
+    padding: 25px 40px;
+    margin: 25px auto 100px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: rgb(190, 190, 190, 1);
+}
+.name {
+    margin-top: 20px;
+    position: relative;
+}
+.name::after {
+    content: 'nijito gotoh';
+    position: absolute;
+    font-size: 1.2rem;
+    top: 15px;
+    left: 140px;
+    transition: 0.5ms;
+}
+.sns-pc {
+    margin: 20px 15px;
+    gap: 25px;
+    transition: 0.5s;
+}
+.tours {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 40px;
+}
+.tours::before {
+    content: '使用ソフト';
+    position: absolute;
+    font-size: 0.7rem;
+    top: -38%;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ対応
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+@media screen and (min-width: 2000px) {
+    .content-wrapper {
+        max-width: 2000px;
+    }
+    /* イラスト幅指定 */
+    .content-wrapper img,
+    .analog-btn {
+        width: 40rem;
+        height: 40rem;
+    }
+}
+@media screen and (max-width: 1660px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 27rem;
+        height: 27rem;
+    }
+}
+/* プロフィール画像、テキストボックス可変開始 */
+@media screen and (max-width: 1400px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 22rem;
+        height: 22rem;
+    }
+    .profile-img ,.profile-main-textbox {
+        height: 55rem;
+    }
+    .name::after {
+        content: 'nijito gotoh';
+        font-size: 1.2rem;
+        top: 16px;
+        left: 140px;
+    }
+}
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 1360px) {
+    .profile-img ,.profile-main-textbox {
+        height: 55rem;
+    }
+    .tours::before {
+        font-size: 0.7rem;
+        top: -38%;
+    }
+    .mode-grid-none {
+        display: none;
+    }
+}
+/* プロフィールページ テキストボックス可変開始 */
+/* 使用ソフトテキスト 1列に変更 */
+@media screen and (max-width: 1200px) {
+        /* イラスト幅指定 */
+    .content-wrapper img ,.analog-btn {
+        width: 21rem;
+        height: 21rem;
+    }
+    .sns a img {
+        height: 2.5rem;
+    }
+
+    /* 使用ソフトテキスト 1列に変更 */
+    .tours {
+        display: flex;
+    }
+    .mode-grid-none {
+        display: inline;
+    }
+}
+/* SNSアイコン可変開始 */
+@media screen and (max-width: 1190px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 30rem;
+        height: 30rem;
+    }
+        /* SNSアイコンの幅指定 */
+    .sns {
+        gap: 20px;
+    }
+}
+/* プロフィールページレイアウト変更 */
+@media screen and (max-width: 1150px) {
+/* ーーーーーーーーーーーーーーーーーーーーーーーーー
+プロフィールページレイアウト変更
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+        .profile-content-wrapper {
+            display: flex;
+            margin: 0%;
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .profile-img {
+            height: 45rem;
+        }
+        .sns-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 45rem;
+            overflow: hidden;
+            background-color: rgb(190, 190, 190, 1);
+        }
+        .profile-main-textbox {
+            width: 100%;
+            height: 30rem;
+            grid-area: 2 / 1 / 3 / 3;
+        }
+        .profile-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .profile-main-textbox h1 {
+            margin-bottom: 30px;
+        }
+        .sns-tablet a img {
+            height: 5.3rem;
+            margin: 10px;
+            transition: 0.5s;
+        }
+        .sns-tablet::before {
+            content: 'Links';
+            font-size: 3.4rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+            transition: 0.5s;
+        }
+        .sns-pc {
+            display: none;
+        }
+        /* プロフィールページ テキストボックスレイアウト変更 */
+        .name,
+        .profile-text {
+            margin-left: 10%;
+        }
+        .name {
+            position: relative;
+        }
+        .name::after {
+            content: 'nijito gotoh';
+            position: absolute;
+            font-size: 1.2rem;
+            top: 17px;
+            left: 135px;
+        }
+}
+@media screen and (max-width: 1044px) {
+    /* イラスト幅指定 */
+    .content-wrapper img,
+    .analog-btn {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+/* SNSセクション幅MAX開始 */
+/* フッターデザイン可変開始 */
+@media screen and (max-width: 900px) {
+    .profile-img {
+        height: 45rem;
+    }
+    .sns-tablet {
+        height: 45rem;
+    }
+    .sns-tablet::before {
+        content: 'Links';
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 22rem;
+        height: 22rem;
+    }
+        /* SNSセクションの幅MAX指定 */
+    .links-wrapper {
+        width: 100%;
+        background-color: rgb(190, 190, 190, 1);
+    }
+    .links {
+        width: 100%;
+        margin: auto;
+        max-width: none;
+    }
+    .sns-tablet::before {
+        transition: 0.5s;
+    }
+        /* フッターロゴサイズ */
+    .logo-section {
+        width: 10rem;
+    }
+}
+@media screen and (max-width: 823px) {
+    .profile-content-wrapper {
+
+    }
+    .profile-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-img {
+        height: 35rem;
+        margin-bottom: 15px;
+    }
+    .sns {
+        gap: 30px;
+    }
+    .sns-pc {
+        display: flex;
+        margin-left: 10%;
+    }
+    .sns-tablet {
+        display: none;
+    }
+    .profile-main-textbox {
+        margin-top: 25px;
+        height: 37rem;
+    }
+    .main-header {
+        padding-top: 20px;
+        height: 200px;
+        background-image: none;
+    }
+    .main-header .logo img {
+        display: block;
+        width: 35%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+ /* SNSセクション上下マージン可変開始 */
+@media screen and (max-width: 748px) {
+         /* SNSセクション上下マージン */
+    .top-hook {
+        margin-bottom: 25px;
+    }
+    .content-wrapper {
+        margin-top: 25px;
+    }
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 17rem;
+        height: 17rem;
+    }
+}
+/* SNSセクション フォントサイズ可変開始 */
+/* フッターbtnフォントサイズ可変開始 */
+/* アナログbtnフォントサイズ可変開始 */
+@media screen and (max-width: 700px) {
+    /* SNSセクションフォントサイズ */
+    .name-section h2{
+        font-size: 1rem;
+    }
+    .name-section h2::after {
+        font-weight: 300;
+        font-size: 0.8rem;
+        top: 200%;
+    }
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 15rem;
+        height: 15rem;
+    }
+    .name-section{
+        line-height: 0.75rem;
+    }
+    .name-section h2{
+        font-size: 1.5rem;
+    }
+    .name-section p {
+        font-size: 0.7rem;
+    }
+    .sns {
+        gap: 15px;
+    }
+    .sns a img {
+        height: 2.5rem;
+    }
+         /* アナログボタン */
+    .analog-btn p {
+        font-size: 0.8rem;
+    }
+    .analog-btn p::after {
+        top:2.6rem;
+        left: 0.9rem;
+        border-top: 1rem solid rgb(0, 0, 0);
+        border-left: 0.6rem solid;
+        border-right: 0.6rem solid;
+        clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+    }
+        /* トップ矢印 */
+    .btns .top-btn::after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 3px;
+        border-top: 0.7rem solid rgb(0, 0, 0);
+        border-right: 0.7rem solid;
+        clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%);
+    }
+        /* フッターロゴサイズ */
+        .logo-section {
+        width: 6rem;
+    }
+    .top-btn ,.nav-btn {
+        font-size: 0.7rem;
+    }
+    /* プロフィールイメージサイズ */
+    .profile-img {
+        height: 22rem;
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 520px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 12rem;
+        height: 12rem;
+    }
+    .name-section{
+        line-height: 0.75rem;
+    }
+    .name-section h2{
+        font-size: 1.5rem;
+    }
+    .name-section p {
+        font-size: 0.7rem;
+    }
+    .sns {
+        gap: 15px;
+    }
+    .sns a img {
+        height: 2.5rem;
+    }
+    /* ロゴサイズ */
+    .logo-section {
+        width: 5rem;
+    }
+    /* プロフィールイメージサイズ */
+    .profile-img {
+        height: 30rem;
+        margin-bottom: 20px;
+    }
+    .btns .nav-btn {
+        font-size: 0.5rem;
+        gap: 0.5rem;
+    }
+}
+@media screen and (max-width: 440px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 12rem;
+        height: 12rem;
+    }
+    .sns a img {
+        height: 2.3rem;
+    }
+        /* ナビボタンフォントサイズ */
+    .btns .nav-btn {
+        gap: 0.5rem;
+    }
+    /* プロフィール-ページサイズ */
+    .profile-img {
+        height: 25rem;
+        margin-bottom: 20px;
+    }
+    .profile-main-textbox {
+        font-size: 80%;
+    }
+    .name::after {
+        font-size: 1rem;
+        top: 13px;
+        left: 110px;
+        transition: 0.5ms;
+    }
+}
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 400px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 11rem;
+        height: 11rem;
+    }
+    .content-wrapper img,.analog-btn {
+        font-size: 1rem;
+    }
+    /* アナログボタン矢印 */
+    .analog-btn {
+        padding-bottom: 15%;
+        }
+    .analog-btn p::after {
+        top: 2.9rem;
+        left: 1.3rem;
+        border-top: 0.7rem solid rgb(0, 0, 0);
+        border-left: 0.3rem solid;
+        border-right: 0.3rem solid;
+        clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+    }
+    /* プロフィールページ  */
+    .tours::before {
+        font-size: 0.6rem;
+        top: -38%;
+    }
+    .mode-grid-none {
+        display: none;
+    }
+}
+@media screen and (max-width: 380px) {
+        /* イラスト幅指定 */
+    .content-wrapper img,.analog-btn {
+        width: 8rem;
+        height: 8rem;
+    }
+    .content-wrapper img,.analog-btn {
+        font-size: 1rem;
+    }
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+イラスト個々のページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.illustrations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+.illustration-wrapper {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    position: absolute;
+    top: 1%;
+}
+.illustrations img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+works
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.works-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 23rem;
+    background-image: url(../images/etc/miku.png);
+    background-size: cover;
+    filter: grayscale(1);
+}
+.works-title{
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    font-size: 2.3rem;
+}
+.main-wrapper {
+    margin: auto;
+    max-width: 1300px;
+}
+.works-main {
+    display: flex;
+    margin: 2rem auto 0 auto;
+    width: 100%;
+}
+/* スライダータイトル */
+.slider-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.slider-title h2 {
+    font-size: 2vw;
+    margin-top: 2rem;
+}
+.web-wrapper, .mv-wrapper, .etc-wrapper {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box; /* パディング込みでサイズ計算 */
+}
+/* スライダーコンテナ */
+.web-slider-container, .mv-slider-container, .etc-slider-container {
+    display: flex;
+    width: 95%;
+    height: 15vw;
+    max-width: 1200px;
+    max-height: 13rem;
+    margin: auto;
+    overflow-x: hidden; /* 水平方向のスクロールを無効に */
+    overflow-y: hidden; /* 垂直方向のスクロールを無効に */
+    cursor: pointer;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;      /* Firefox用 */
+    -ms-overflow-style: none;   /* IE用 */
+    -webkit-overflow-scrolling: touch; /* スマホ対応のため必須 */
+    background-color: white;
+    border: 10px solid rgb(190, 190, 190, 1);
+}
+/* スライド画像 */
+.web-slideimg, .mv-slideimg{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+}
+/* スライド画像内のリンクと画像 */
+.web-slideimg a, .mv-slideimg a, .etc-slideimg a {
+    display: block;
+}
+.web-slideimg img, .mv-slideimg img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    object-fit: contain;
+    pointer-events: none; /* 上下スクロールなどの誤作動防止 */
+    user-select: none; /* ドラッグ選択防止 */
+    filter: grayscale(1);
+}
+.etc-slideimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+.etc-slideimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 必要なら cover に変更可 */
+    object-position: center center;
+    user-select: none;
+    pointer-events: none;
+    filter: grayscale(0.8);
+}
+@media screen and (max-width: 800px) {
+    .works-body {
+        height: 62rem;
+    }
+    .works-header {
+        height: 10rem;
+        margin-bottom: 0;
+    }
+    .web-wrapper .slider-title h2{
+        margin-top: 0;
+    }
+    .slider-title h2 {
+        font-size: 1.5rem;
+    }
+    .works-main {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 15vw;
+        max-height: 43rem;
+    }
+    /* スライダーコンテナ */
+    .web-slider-container, .mv-slider-container, .etc-slider-container {
+        width: 95%;
+        height: 25rem;
+        max-width: 30rem;
+        max-height: 13rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .slider-title h2 {
+        font-size: 1rem;
+    }
+    .works-main {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 10rem;
+        max-height: 43rem;
+    }
+    /* スライダーコンテナ */
+    .web-slider-container, .mv-slider-container, .etc-slider-container {
+        width: 95%;
+        height: 10rem;
+        max-width: 20rem;
+        max-height: 13rem;
+    }
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+works pages
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.workspage-header h1 {
+    font-size: 2.3rem;
+    top: 20px;
+    left: 100px;
+    position: absolute;
+}
+.works-wrapper {
+    margin-top: 6.5rem;
+}
+.section{
+    display: flex;
+    width: 90%;
+    margin: 5rem auto;
+}
+.works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:3% 1% 0 1%;
+}
+.img-wrapper {
+    display: flex;
+    width: 43rem;
+    height: 25rem;
+    overflow: hidden;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border: 3px solid rgb(108, 108, 108);
+    background-color: rgb(108, 108, 108);
+}
+.img-wrapper img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+.works-container p {
+    margin-top: 10px;
+}
+.msg {
+    width: 100%;
+    height: 30rem;
+    margin-top: 3%;
+    position: relative;
+    background-color: rgb(190, 190, 190, 1);
+}
+.msg h2 {
+    font-size: 1.4vw;
+    top: -35px;
+    left: 10px;
+    position: absolute;
+}
+.msg p {
+    font-size: 1.2vw;
+    margin: 20px;
+}
+.msg a {
+    font-size: 1.2vw;
+    color: rgb(113, 86, 29);
+    /* padding: 2%; */
+    /* background-color: black; */
+    /* white-space: nowrap; */
+}
+.works-wrapper {
+    margin-bottom: 7rem;
+}
+.a-wrapper {
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    bottom: 20px;
+    position: absolute;
+}
+.before-site {
+    position: relative;
+}
+.before-site::after {
+    content: " ※改修前";
+    font-size: 0.9vw;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .workspage-header h1 {
+        font-size: 2rem;
+        top: 20px;
+        left: 100px;
+        position: absolute;
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 2rem auto;
+    }
+    .section img, .section img, .section img {
+        width: 100%;
+    }
+    .works-container p {
+        margin-top: 0.2rem;
+        font-size: 2.6vw;
+    }
+    .img-wrapper {
+        display: flex;
+        width: 100%;
+        height: 50vw;
+    }
+    .img-wrapper img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .msg {
+        margin-top: 3rem;
+        height: 20rem;
+    }
+    .msg h2 {
+        font-size: 3vw;
+        top: -20px;
+        left: 10px;
+    }
+    .msg p {
+        font-size: 2vw;
+    }
+    .msg a {
+        font-size: 1.2rem;
+    }
+    .works-wrapper {
+        margin-top: 1rem;
+    }
+    .workspage-header h1 {
+        font-size: 7vw;
+        margin: 20px 0 0 5%;
+        position: static;
+    }
+
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+準備中ページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.prepare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+.prepare-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+.prepare img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+}
