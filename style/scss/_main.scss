@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+@use 'variables';
+
+@charset "UTF-8";
+
+html {
+  // オンにすると更新するたびに一番上にいく 要修正
+  /* scroll-behavior: smooth; */
+}
+
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: rgb(230, 230, 228, 1);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+メインページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/*ーーーーーーーーーーーー
+header
+ーーーーーーーーーーー*/
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  height: 670px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../images/illustration/00.png);
+
+  .logo img {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/*ーーーーーーーーーーーー
+links
+ーーーーーーーーーーー*/
+
+/* トップボタンを押したとき上にスペースができるようここでmargin指定 */
+/* アナログページの指定と統一するため.links-wrapperではなくここで指定 */
+.top-hook {
+    margin-bottom: 55px;
+}
+
+.links-wrapper {
+  height: 10rem;
+
+  .links {
+    display: flex;
+    max-width: 65%;
+    margin: 0 20%;
+    height: 10rem;
+    background-color: rgb(190, 190, 190, 1);
+    transition: 0.5s;
+
+    .name-section {
+      text-align: center;
+      margin: auto;
+
+      h2 {
+        font-size: 2rem;
+        position: relative;
+      }
+
+      h2::after {
+        content: 'illustrator / MV director';
+        position: absolute;
+        font-weight: 300;
+        font-size: 1rem;
+        top: 97%;
+        left: 50%;
+        transform: translateX(-51%);
+        white-space: nowrap;
+      }
+    }
+
+    .sns {
+      display: flex;
+      margin: auto;
+      gap: 40px;
+
+      a img {
+        height: 3.3rem;
+        transition: 0.5s;
+      }
+
+      /* リンク ホバープロパティ */
+      a :hover {
+        transform: scale(1.07);
+        opacity: 0.6;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+/*ーーーーーーーーーーーー
+main
+ーーーーーーーーーーー*/
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 55px auto 100px;
+  max-width: 100rem;
+  gap: 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+
+  img,
+  .analog-btn {
+    width: 32rem;
+    height: 32rem;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+    background-color: rgb(217, 217, 217, 1);
+  }
+
+  /* アナログボタン矢印 */
+  .analog-btn p {
+    position: relative;
+  }
+  p::after {
+    content: '';
+    position: absolute;
+    top: 3.2rem;
+    left: 1.1rem;
+    border-top: 2rem solid rgb(0, 0, 0);
+    border-left: 1rem solid;
+    border-right: 1rem solid;
+    clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+  }
+
+  /* アナログボタンのテキスト ホバー相殺プロパティ */
+  .analog-btn :hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+  /* メインホバープロパティ */
+  a :hover {
+    transform: scale(1.04);
+    opacity: 0.87;
+    z-index: 5;
+}
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ対応
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+@media screen and (min-width: 2000px) {
+  .content-wrapper {
+    max-width: 2000px;
+
+    /* イラスト幅指定 */
+    img,
+    .analog-btn {
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1660px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 27rem;
+    height: 27rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+/* プロフィールページ テキストボックス可変開始 */
+/* 使用ソフトテキスト 1列に変更 */
+@media screen and (max-width: 1200px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 21rem;
+    height: 21rem;
+  }
+
+  .sns a img {
+    height: 2.5rem;
+  }
+}
+
+/* SNSアイコン可変開始 */
+@media screen and (max-width: 1190px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  /* SNSアイコンの幅指定 */
+  .sns {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1044px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+/* SNSセクション幅MAX開始 */
+/* フッターデザイン可変開始 */
+@media screen and (max-width: 900px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 22rem;
+    height: 22rem;
+  }
+
+  /* SNSセクションの幅MAX指定 */
+  .links-wrapper {
+    width: 100%;
+    background-color: rgb(190, 190, 190, 1);
+  }
+
+  .links {
+    width: 100%;
+    margin: auto;
+    max-width: none;
+  }
+}
+
+  // メインヘッダーのイラスト非表示
+@media screen and (max-width: 823px) {
+  .sns-pc {
+    display: flex;
+    margin-left: 10%;
+  }
+
+  // メインヘッダーのイラスト非表示
+  .main-header {
+    padding-top: 20px;
+    height: 200px;
+    background-image: none;
+  }
+
+  .main-header .logo img {
+    display: block;
+    width: 35%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/* SNSセクション上下マージン可変開始 */
+@media screen and (max-width: 748px) {
+
+  /* SNSセクション上下マージン */
+  .top-hook {
+    margin-bottom: 25px;
+  }
+
+  .content-wrapper {
+    margin-top: 25px;
+  }
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+
+/* SNSセクション フォントサイズ可変開始 */
+/* フッターbtnフォントサイズ可変開始 */
+/* アナログbtnフォントサイズ可変開始 */
+@media screen and (max-width: 700px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* SNSセクションフォントサイズ */
+  .name-section .name-section h2::after {
+    font-weight: 300;
+    font-size: 0.8rem;
+    top: 200%;
+    line-height: 0.75rem;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  .sns {
+    gap: 15px;
+
+    a img {
+      height: 2.5rem;
+    }
+  }
+
+  /* アナログボタン */
+  .analog-btn p {
+    font-size: 0.8rem;
+  }
+
+  .analog-btn p::after {
+    top: 2.6rem;
+    left: 0.9rem;
+    border-top: 1rem solid rgb(0, 0, 0);
+    border-left: 0.6rem solid;
+    border-right: 0.6rem solid;
+    clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+  }
+
+  /* トップ矢印 */
+  .btns .top-btn::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 3px;
+    border-top: 0.7rem solid rgb(0, 0, 0);
+    border-right: 0.7rem solid;
+    clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%);
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .name-section {
+    line-height: 0.75rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  .sns {
+    gap: 15px;
+
+    a img {
+      height: 2.5rem;
+    }
+  }
+
+  /* ロゴサイズ */
+  .logo-section {
+    width: 5rem;
+  }
+
+  .btns .nav-btn {
+    font-size: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .sns a img {
+    height: 2.3rem;
+  }
+
+  /* ナビボタンフォントサイズ */
+  .btns .nav-btn {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .content-wrapper img,
+  .analog-btn {
+    font-size: 1rem;
+  }
+
+  /* アナログボタン矢印 */
+  .analog-btn {
+    padding-bottom: 15%;
+  }
+
+  .analog-btn p::after {
+    top: 2.9rem;
+    left: 1.3rem;
+    border-top: 0.7rem solid rgb(0, 0, 0);
+    border-left: 0.3rem solid;
+    border-right: 0.3rem solid;
+    clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+    width: 8rem;
+    height: 8rem;
+    font-size: 1rem;
+
+  }
+}

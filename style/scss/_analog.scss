@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@use 'variables';
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+アナログイラストページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+/* トップボタンを押したとき上にスペースができるようここでmargin指定 */
+.analog-top-hook {
+  margin-bottom: 55px;
+}
+
+/* アナログページ用ヘッダープロパティ */
+.analog-header {
+  display: flex;
+  width: 100%;
+  height: 23rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.analog-header-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url(../../images/analog-illustration/00.PNG);
+
+  h2 {
+    font-size: 2.3rem;
+    margin: auto;
+    position: relative;
+  }
+}
+/* テキストの小さい方（analog illustration） */
+.analog-header-textbox ::after {
+  content: 'analog illustration';
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  top: 50px;
+  left: 78px;
+  transform: translateX(-51%);
+  white-space: nowrap;
+}
+
+/* テキストの白い影 */
+.analog-header-textbox h2 , .analog-header-textbox p {
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@use 'variables';
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+フッター
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+footer {
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  position: fixed;
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto 0;
+    bottom: 0;
+    background-color: rgb(190, 190, 190, 1);
+
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 100%;
+      padding: 5%;
+
+      .top-btn {
+        position: relative;
+      }
+
+      /* トップボタンの矢印 */
+      .top-btn::after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 6px;
+        border-top: 0.7rem solid rgb(0, 0, 0);
+        border-right: 0.7rem solid;
+        clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%);
+      }
+
+      .nav-btn {
+        display: flex;
+        gap: 1.2rem;
+      }
+    }
+
+    /* フッターロゴ */
+    .logo-section {
+      display: block;
+      position: absolute;
+      width: 13rem;
+      height: auto;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* フッターホバープロパティ */
+.top-btn:hover ,.nav-btn a:hover {
+  opacity: 0.5;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ対応
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+@media screen and (max-width: 900px) {
+  /* フッターロゴサイズ */
+  .logo-section {
+      width: 10rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  /* フッターロゴサイズ */
+  .logo-section {
+    width: 6rem;
+  }
+
+  .top-btn,
+  .nav-btn {
+    font-size: 0.7rem;
+  }
+}

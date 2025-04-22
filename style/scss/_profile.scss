@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+@use 'variables';
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+プロフィールページ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+.profile-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-content-wrapper {
+  margin-bottom: 55px;
+
+  .profile-img {
+    height: 50rem;
+    margin: 55px;
+    transition: 0.5s;
+  }
+
+  // sns スマホ版のみ表示
+  .sns-tablet {
+    display: none;
+    transition: 0.5s;
+  }
+}
+
+.profile-main-textbox {
+  height: 50rem;
+  padding: 25px 40px;
+  margin: 25px auto 100px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: rgb(190, 190, 190, 1);
+  .name {
+    margin-top: 20px;
+    position: relative;
+  }
+  .name::after {
+    content: 'nijito gotoh';
+    position: absolute;
+    font-size: 1.2rem;
+    top: 15px;
+    left: 140px;
+    transition: 0.5ms;
+  }
+  // sns pc版のみ表示
+  .sns-pc {
+    margin: 20px 15px;
+    gap: 25px;
+    transition: 0.5s;
+  }
+}
+
+.profile-text {
+  .tours {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .tours::before {
+    content: '使用ソフト';
+    position: absolute;
+    font-size: 0.7rem;
+    top: -38%;
+  }
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ対応
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+
+
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 1360px) {
+  .profile-img ,.profile-main-textbox {
+      height: 55rem;
+  }
+  .tours::before {
+      font-size: 0.7rem;
+      top: -38%;
+  }
+  .mode-grid-none {
+      display: none;
+  }
+}
+
+/* 使用ソフトテキスト 1列に変更 */
+@media screen and (max-width: 1200px) {
+  .tours {
+    display: flex;
+  }
+
+  .mode-grid-none {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .profile-content-wrapper {
+      display: flex;
+      margin: 0%;
+      grid-area: 1 / 1 / 2 / 3;
+  }
+  .profile-img {
+      height: 45rem;
+  }
+  .sns-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 45rem;
+      overflow: hidden;
+      background-color: rgb(190, 190, 190, 1);
+  }
+  .profile-main-textbox {
+      width: 100%;
+      height: 30rem;
+      grid-area: 2 / 1 / 3 / 3;
+  }
+  .profile-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+  }
+  .profile-main-textbox h1 {
+      margin-bottom: 30px;
+  }
+  .sns-tablet a img {
+      height: 5.3rem;
+      margin: 10px;
+      transition: 0.5s;
+  }
+  .sns-tablet::before {
+      content: 'Links';
+      font-size: 3.4rem;
+      font-weight: 300;
+      margin-bottom: 25px;
+      transition: 0.5s;
+  }
+  .sns-pc {
+      display: none;
+  }
+  /* プロフィールページ テキストボックスレイアウト変更 */
+  .name,
+  .profile-text {
+      margin-left: 10%;
+  }
+  .name {
+      position: relative;
+  }
+  .name::after {
+      content: 'nijito gotoh';
+      position: absolute;
+      font-size: 1.2rem;
+      top: 17px;
+      left: 135px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile-img {
+    height: 45rem;
+  }
+
+  .sns-tablet {
+    height: 45rem;
+  }
+
+  .sns-tablet::before {
+    content: 'Links';
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  /* SNSセクションの幅MAX指定 */
+  .links-wrapper {
+    width: 100%;
+    background-color: rgb(190, 190, 190, 1);
+  }
+
+  .links {
+    width: 100%;
+    margin: auto;
+    max-width: none;
+  }
+
+  .sns-tablet::before {
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .profile-main {
+      display: flex;
+      flex-direction: column;
+  }
+  .profile-img {
+      height: 35rem;
+      margin-bottom: 15px;
+  }
+  .sns {
+      gap: 30px;
+  }
+  .sns-pc {
+      display: flex;
+      margin-left: 10%;
+  }
+  .sns-tablet {
+      display: none;
+  }
+  .profile-main-textbox {
+      margin-top: 25px;
+      height: 37rem;
+  }
+  .main-header {
+      padding-top: 20px;
+      height: 200px;
+      background-image: none;
+  }
+  .main-header .logo img {
+      display: block;
+      width: 35%;
+      height: auto;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  /* プロフィールイメージサイズ */
+  .profile-img {
+      height: 30rem;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  /* プロフィール-ページサイズ */
+  .profile-img {
+      height: 25rem;
+      margin-bottom: 20px;
+  }
+  .profile-main-textbox {
+      font-size: 80%;
+  }
+  .name::after {
+      font-size: 1rem;
+      top: 13px;
+      left: 110px;
+      transition: 0.5ms;
+  }
+}
+
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 400px) {
+  .tours::before {
+    font-size: 0.6rem;
+    top: -38%;
+  }
+
+  .mode-grid-none {
+    display: none;
+  }
+}

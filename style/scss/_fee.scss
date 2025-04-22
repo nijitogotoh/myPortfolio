@@ -1,0 +1,548 @@
+@charset "UTF-8";
+
+@use 'variables';
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ対応
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+@media screen and (min-width: 2000px) {
+  .content-wrapper {
+      max-width: 2000px;
+  }
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+      width: 40rem;
+      height: 40rem;
+  }
+}
+
+@media screen and (max-width: 1660px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 27rem;
+      height: 27rem;
+  }
+}
+/* プロフィール画像、テキストボックス可変開始 */
+@media screen and (max-width: 1400px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 22rem;
+      height: 22rem;
+  }
+  .profile-img ,.profile-main-textbox {
+      height: 55rem;
+  }
+  .name::after {
+      content: 'nijito gotoh';
+      font-size: 1.2rem;
+      top: 16px;
+      left: 140px;
+  }
+}
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 1360px) {
+  .profile-img ,.profile-main-textbox {
+      height: 55rem;
+  }
+  .tours::before {
+      font-size: 0.7rem;
+      top: -38%;
+  }
+  .mode-grid-none {
+      display: none;
+  }
+}
+/* プロフィールページ テキストボックス可変開始 */
+/* 使用ソフトテキスト 1列に変更 */
+@media screen and (max-width: 1200px) {
+      /* イラスト幅指定 */
+  .content-wrapper img ,.analog-btn {
+      width: 21rem;
+      height: 21rem;
+  }
+  .sns a img {
+      height: 2.5rem;
+  }
+
+  /* 使用ソフトテキスト 1列に変更 */
+  .tours {
+      display: flex;
+  }
+  .mode-grid-none {
+      display: inline;
+  }
+}
+/* SNSアイコン可変開始 */
+@media screen and (max-width: 1190px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 30rem;
+      height: 30rem;
+  }
+      /* SNSアイコンの幅指定 */
+  .sns {
+      gap: 20px;
+  }
+}
+/* プロフィールページレイアウト変更 */
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーー
+プロフィールページレイアウト変更
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+@media screen and (max-width: 1150px) {
+      .profile-content-wrapper {
+          display: flex;
+          margin: 0%;
+          grid-area: 1 / 1 / 2 / 3;
+      }
+      .profile-img {
+          height: 45rem;
+      }
+      .sns-tablet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 45rem;
+          overflow: hidden;
+          background-color: rgb(190, 190, 190, 1);
+      }
+      .profile-main-textbox {
+          width: 100%;
+          height: 30rem;
+          grid-area: 2 / 1 / 3 / 3;
+      }
+      .profile-main {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+      }
+      .profile-main-textbox h1 {
+          margin-bottom: 30px;
+      }
+      .sns-tablet a img {
+          height: 5.3rem;
+          margin: 10px;
+          transition: 0.5s;
+      }
+      .sns-tablet::before {
+          content: 'Links';
+          font-size: 3.4rem;
+          font-weight: 300;
+          margin-bottom: 25px;
+          transition: 0.5s;
+      }
+      .sns-pc {
+          display: none;
+      }
+      /* プロフィールページ テキストボックスレイアウト変更 */
+      .name,
+      .profile-text {
+          margin-left: 10%;
+      }
+      .name {
+          position: relative;
+      }
+      .name::after {
+          content: 'nijito gotoh';
+          position: absolute;
+          font-size: 1.2rem;
+          top: 17px;
+          left: 135px;
+      }
+}
+@media screen and (max-width: 1044px) {
+  /* イラスト幅指定 */
+  .content-wrapper img,
+  .analog-btn {
+      width: 25rem;
+      height: 25rem;
+  }
+}
+/* SNSセクション幅MAX開始 */
+/* フッターデザイン可変開始 */
+@media screen and (max-width: 900px) {
+  .profile-img {
+      height: 45rem;
+  }
+  .sns-tablet {
+      height: 45rem;
+  }
+  .sns-tablet::before {
+      content: 'Links';
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+  }
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 22rem;
+      height: 22rem;
+  }
+      /* SNSセクションの幅MAX指定 */
+  .links-wrapper {
+      width: 100%;
+      background-color: rgb(190, 190, 190, 1);
+  }
+  .links {
+      width: 100%;
+      margin: auto;
+      max-width: none;
+  }
+  .sns-tablet::before {
+      transition: 0.5s;
+  }
+      /* フッターロゴサイズ */
+  .logo-section {
+      width: 10rem;
+  }
+}
+@media screen and (max-width: 823px) {
+  .profile-content-wrapper {
+
+  }
+  .profile-main {
+      display: flex;
+      flex-direction: column;
+  }
+  .profile-img {
+      height: 35rem;
+      margin-bottom: 15px;
+  }
+  .sns {
+      gap: 30px;
+  }
+  .sns-pc {
+      display: flex;
+      margin-left: 10%;
+  }
+  .sns-tablet {
+      display: none;
+  }
+  .profile-main-textbox {
+      margin-top: 25px;
+      height: 37rem;
+  }
+  .main-header {
+      padding-top: 20px;
+      height: 200px;
+      background-image: none;
+  }
+  .main-header .logo img {
+      display: block;
+      width: 35%;
+      height: auto;
+      margin: 0 auto;
+  }
+}
+/* SNSセクション上下マージン可変開始 */
+@media screen and (max-width: 748px) {
+       /* SNSセクション上下マージン */
+  .top-hook {
+      margin-bottom: 25px;
+  }
+  .content-wrapper {
+      margin-top: 25px;
+  }
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 17rem;
+      height: 17rem;
+  }
+}
+/* SNSセクション フォントサイズ可変開始 */
+/* フッターbtnフォントサイズ可変開始 */
+/* アナログbtnフォントサイズ可変開始 */
+@media screen and (max-width: 700px) {
+  /* SNSセクションフォントサイズ */
+  .name-section h2{
+      font-size: 1rem;
+  }
+  .name-section h2::after {
+      font-weight: 300;
+      font-size: 0.8rem;
+      top: 200%;
+  }
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 15rem;
+      height: 15rem;
+  }
+  .name-section{
+      line-height: 0.75rem;
+  }
+  .name-section h2{
+      font-size: 1.5rem;
+  }
+  .name-section p {
+      font-size: 0.7rem;
+  }
+  .sns {
+      gap: 15px;
+  }
+  .sns a img {
+      height: 2.5rem;
+  }
+       /* アナログボタン */
+  .analog-btn p {
+      font-size: 0.8rem;
+  }
+  .analog-btn p::after {
+      top:2.6rem;
+      left: 0.9rem;
+      border-top: 1rem solid rgb(0, 0, 0);
+      border-left: 0.6rem solid;
+      border-right: 0.6rem solid;
+      clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+  }
+      /* トップ矢印 */
+  .btns .top-btn::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 3px;
+      border-top: 0.7rem solid rgb(0, 0, 0);
+      border-right: 0.7rem solid;
+      clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%);
+  }
+      /* フッターロゴサイズ */
+      .logo-section {
+      width: 6rem;
+  }
+  .top-btn ,.nav-btn {
+      font-size: 0.7rem;
+  }
+  /* プロフィールイメージサイズ */
+  .profile-img {
+      height: 22rem;
+      margin: 20px;
+  }
+}
+@media screen and (max-width: 520px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 12rem;
+      height: 12rem;
+  }
+  .name-section{
+      line-height: 0.75rem;
+  }
+  .name-section h2{
+      font-size: 1.5rem;
+  }
+  .name-section p {
+      font-size: 0.7rem;
+  }
+  .sns {
+      gap: 15px;
+  }
+  .sns a img {
+      height: 2.5rem;
+  }
+  /* ロゴサイズ */
+  .logo-section {
+      width: 5rem;
+  }
+  /* プロフィールイメージサイズ */
+  .profile-img {
+      height: 30rem;
+      margin-bottom: 20px;
+  }
+  .btns .nav-btn {
+      font-size: 0.5rem;
+      gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 440px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 12rem;
+      height: 12rem;
+  }
+  .sns a img {
+      height: 2.3rem;
+  }
+      /* ナビボタンフォントサイズ */
+  .btns .nav-btn {
+      gap: 0.5rem;
+  }
+  /* プロフィール-ページサイズ */
+  .profile-img {
+      height: 25rem;
+      margin-bottom: 20px;
+  }
+  .profile-main-textbox {
+      font-size: 80%;
+  }
+  .name::after {
+      font-size: 1rem;
+      top: 13px;
+      left: 110px;
+      transition: 0.5ms;
+  }
+}
+/* 使用ソフトテキスト 2列に変更 */
+@media screen and (max-width: 400px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 11rem;
+      height: 11rem;
+  }
+  .content-wrapper img,.analog-btn {
+      font-size: 1rem;
+  }
+  /* アナログボタン矢印 */
+  .analog-btn {
+      padding-bottom: 15%;
+      }
+  .analog-btn p::after {
+      top: 2.9rem;
+      left: 1.3rem;
+      border-top: 0.7rem solid rgb(0, 0, 0);
+      border-left: 0.3rem solid;
+      border-right: 0.3rem solid;
+      clip-path: polygon(50% 30%, 100% 0, 50% 100%, 0 0);
+  }
+  /* プロフィールページ  */
+  .tours::before {
+      font-size: 0.6rem;
+      top: -38%;
+  }
+  .mode-grid-none {
+      display: none;
+  }
+}
+@media screen and (max-width: 380px) {
+      /* イラスト幅指定 */
+  .content-wrapper img,.analog-btn {
+      width: 8rem;
+      height: 8rem;
+  }
+  .content-wrapper img,.analog-btn {
+      font-size: 1rem;
+  }
+}
+
+
+
+// ワークスページ
+
+@media screen and (max-width: 800px) {
+  .works-body {
+      height: 62rem;
+  }
+  .works-header {
+      height: 10rem;
+      margin-bottom: 0;
+  }
+  .web-wrapper .slider-title h2{
+      margin-top: 0;
+  }
+  .slider-title h2 {
+      font-size: 1.5rem;
+  }
+  .works-main {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      height: 15vw;
+      max-height: 43rem;
+  }
+  /* スライダーコンテナ */
+  .web-slider-container, .mv-slider-container, .etc-slider-container {
+      width: 95%;
+      height: 25rem;
+      max-width: 30rem;
+      max-height: 13rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider-title h2 {
+      font-size: 1rem;
+  }
+  .works-main {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      height: 10rem;
+      max-height: 43rem;
+  }
+  /* スライダーコンテナ */
+  .web-slider-container, .mv-slider-container, .etc-slider-container {
+      width: 95%;
+      height: 10rem;
+      max-width: 20rem;
+      max-height: 13rem;
+  }
+}
+
+
+
+
+
+
+// ワークス個々のページ
+
+@media screen and (max-width: 1040px) {
+  .workspage-header h1 {
+      font-size: 2rem;
+      top: 20px;
+      left: 100px;
+      position: absolute;
+  }
+  .section{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 2rem auto;
+  }
+  .section img, .section img, .section img {
+      width: 100%;
+  }
+  .works-container p {
+      margin-top: 0.2rem;
+      font-size: 2.6vw;
+  }
+  .img-wrapper {
+      display: flex;
+      width: 100%;
+      height: 50vw;
+  }
+  .img-wrapper img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+  }
+  .msg {
+      margin-top: 3rem;
+      height: 20rem;
+  }
+  .msg h2 {
+      font-size: 3vw;
+      top: -20px;
+      left: 10px;
+  }
+  .msg p {
+      font-size: 2vw;
+  }
+  .msg a {
+      font-size: 1.2rem;
+  }
+  .works-wrapper {
+      margin-top: 1rem;
+  }
+  .workspage-header h1 {
+      font-size: 7vw;
+      margin: 20px 0 0 5%;
+      position: static;
+  }
+
+}
+
