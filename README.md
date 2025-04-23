@@ -15,7 +15,7 @@ HTML / CSS / JavaScript をベースに、Sass（SCSS）を使用してスタイ
 
 ## ⚠️ 注意事項
 
-現在、本番環境では従来の CSS（`style/css/style.css`）が使用されています。  
+現在、本番環境では従来の CSS（`style/original_css/style.css`）が使用されています。  
 このリポジトリでは、保守性と拡張性を目的に、**Sassによるスタイルのリファクタリング**を進めています。
 
 > `style/scss/style.scss` をコンパイルして `style/css/style.css` に反映する構成です。
